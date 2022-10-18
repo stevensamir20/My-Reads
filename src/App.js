@@ -26,6 +26,8 @@ function App() {
       API.update(book, shelf);
     }
     else {
+      book.shelf = shelf;
+      setBooks([...books, book])
       API.update(book, shelf)
       .then(() => {
         API.getAll().then((res) => {
