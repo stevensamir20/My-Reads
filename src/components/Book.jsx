@@ -30,7 +30,7 @@ export const Book = (props) => {
           </div>
           <div className="book-shelf-changer">
             <select value={book.shelf ? book.shelf : 'none'} onChange={(event) => changeBookShelf(event)}>
-              <option value="none" disabled>
+              <option disabled>
                 Move to...
               </option>
               <option value="currentlyReading">
